@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do list</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h2>
+                todolist
+            </h2>
+        </div>
+        <div class="links">
+            <div>
+                <ul class="links">
+                    <li>
+                        Home
+                    </li>
+                    <li>
+                        Feature
+                    </li>
+                </ul>
+            </div>
+            <hr>    
+            <div class="btns">
+                <button class="log-btn btn">Log in</button>
+                <button class="start-btn btn" onclick="window.location.href='login.html'">
+Start for Free</button>
+            </div>
+            
+        </div>
+    </nav>
+    <section class="main"> 
+        <div>
+            <img src="https://res.cloudinary.com/imagist/image/fetch/q_auto,f_auto,c_scale,w_1536/https%3A%2F%2Ftodoist.com%2Fstatic%2Ffeatures-teams%2Fheader-illustration.png" height="330px" width="1300px">
+        </div>
+        <div>
+            <h1>
+                <span>
+             <s>       Overwhelmed</s>
+                </span>
+                 On top of it
+            </h1>
+            <h2>
+                Todoist makes it frictionless to get all your tasks out of your head 
+                <br>
+                and organized in one trusted place.
+
+            </h2>
+        </div>
+        <div>
+            <button class="start-btn btn" onclick="window.location.href='login.html'">
+                Start for Free
+            </button>
+        </div>
+    </section>
+<!--     
+    <h1>MY TO DO LIST</h1>
+    <div class="container">
+    <div id="myDIV" class="header">
+        <input type="text" id="myInput" placeholder="Title...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+      
+      <ul id="myUL">
+      </ul> 
+    </div> -->
+<!-- 
+    <footer>
+        MADE BY PRIYESH
+        </footer>
+         -->
+
+</body>
+
+<script src="script.js"></script>
+</html>

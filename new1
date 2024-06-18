@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>भारत की चुनौतियाँ</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+script
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 350px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 16px;
+    margin: 0;
+}
+
+.content h2 {
+    font-size: 24px;
+    margin: 20px 0 10px;
+}
+
+.content p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.date, .time, .platform {
+    font-weight: bold;
+}
+
+.speaker {
+    margin-top: 20px;
+}
+
+.speaker img {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>विवेकानंद केंद्र कन्याकुमारी, छत्तीसगढ़ विभाग शाखा - रायपुर</h1>
+        </div>
+        <div class="content">
+            <h2>भारत की चुनौतियाँ</h2>
+            <p>भारत के सामने आने वाली चुनौतियों पर चर्चा</p>
+            <p class="date">मई 11, 2024</p>
+            <p class="time">शाम 6:00 से 8:00</p>
+            <p class="platform">ऑनलाइन गूगल मीट</p>
+            <div class="speaker">
+                <img src="speaker.jpg" alt="Speaker Photo">
+                <p>वक्ता : आ. राहुल जी उइकेया<br>(सह-विभाग प्रमुख-भोपल विभाग)</p>
+            </div>
+        </div>
+        <footer>
+            <p>शुभ चिंतक</p>
+        </footer>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+        <div class="main-content">
+            <header>
+                <h1>Upcoming</h1>
+                <span>May 2024</span>
+            </header>
+            <div class="tasks">
+                <div class="day">
+                    <h2>17 May · Today</h2>
+                    <button class="add-task">+ Add task</button>
+                </div>
+                <div class="day">
+                    <h2>18 May · Tomorrow</h2>
+                    <button class="add-task">+ Add task</button>
+                </div>
+                <div class="day">
+                    <h2>19 May · Sunday</h2>
+                    <button class="add-task">+ Add task</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.add-task-btn, .add-team-btn {
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.add-task-btn {
+    margin-bottom: 20px;
+}
+
+.add-team-btn {
+    margin-top: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+nav ul li.active, nav ul li:hover {
+    background-color: #f0f0f0;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.tasks .day {
+    margin-bottom: 20px;
+}
+
+.tasks .day h2 {
+    margin: 0 0 10px;
+}
+
+.tasks .day .add-task {
+    background-color: transparent;
+    border: none;
+    color: #ff6f61;
+    cursor: pointer;
+}
+
+
+document.querySelectorAll('.add-task').forEach(button => {
+    button.addEventListener('click', () => {
+        const taskText = prompt("Enter the task:");
+        if (taskText) {
+            const taskItem = document.createElement('p');
+            taskItem.textContent = taskText;
+            button.parentElement.appendChild(taskItem);
+        }
+    });
+});

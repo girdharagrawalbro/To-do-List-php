@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.gap {
+    gap: 8px;
+}
+
+.gap-2 {
+    gap: 25px;
+}
+
+.j-bet {
+    justify-content: space-between;
+}
+
+nav {
+    display: flex;
+    padding: 16px 25px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo h2 {
+    font-weight: 600;
+    color: #e34432;
+}
+
+.links, .links ul { 
+    display: flex;
+    align-items: center;
+}
+
+.btn {
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+    border-radius: 8px;
+    border: none;
+    background: transparent;
+    color: #333;
+}
+
+.start-btn {
+    background-color: #e34432;
+    color: white;
+}
+
+.start-btn:hover {
+    background-color: #cf3520;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    cursor: pointer;
+    padding: 8px 15px;
+    font-size: 16px;
+    transition: 0.2s;
+    user-select: none;
+}
+
+ul li:hover {
+    background: #dddddd57;
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    place-items: center;
+    height: 500px;
+    max-height: 500px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.contain h1 {
+    font-size: 60px;
+    color: #333;
+    font-weight: 600;
+}
+
+.contain h1 span {
+    color: #4949498e;
+    text-decoration: line-through;
+}
+
+.contain h2 {
+    font-weight: 400;
+    color: #494949b7;
+}
+
+.big-btn {
+    padding: 12px 20px;
+    font-size: 20px;
+}
+
+.log {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    gap: 50px;
+}
+
+.log div {
+    display: flex;
+    padding-top: 30px;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.log div img {
+    width: 700px;
+    margin: auto;
+}
+
+.log-btn {
+    padding: 10px 15px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid lightgray;
+    background: transparent;
+}
+
+.log-input {
+    padding: 10px;
+    border: 1px solid lightgray;
+    font-size: 15px;
+    border-radius: 8px;
+}
+
+.log-input:focus {
+    outline: none;
+}
+
+.container {
+    display: flex;
+}
+
+.container .sidebar {
+    background-color: whitesmoke;
+    padding: 10px 18px;
+    width: 270px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.container .sidebar .details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.container .sidebar img {
+    padding: 5px;
+}
+
+.container .sidebar h4 {
+    width: 180px;
+    overflow: hidden;
+}
+
+#sidebar-nav li {
+    align-items: center;
+}
+
+#sidebar-nav li div {
+    display: flex;
+}
+
+.showAddTaskButton {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    align-items: center;
+}
+
+#sidebar-nav li > div {
+    justify-content: space-between;
+}
+
+.active {
+    background-color: #e3443217;
+    color: #e34432;
+}
+
+.main-screen {
+    width: 100%;
+    height: 635px;
+    max-height: 100vh;
+    overflow-y: scroll;
+    padding: 8px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.main-screen .mark {
+    padding: 10px;
+}
+
+.main-screen .mark h4 {
+    color: rgba(71, 71, 71, 0.342); 
+    font-weight: 500;
+}
+
+.main-screen .main-content {
+    padding: 30px 80px;
+}
+
+.main-screen .show {
+    text-align: center;
+}
+
+.main-screen .show h1 {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.overlay {
+    display: none;
+    position: fixed; /* Ensure it covers the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 999; /* Below .addtask but above other content */
+}
+
+.addtask {
+    display: none;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 8px;
+    position: absolute;
+    width: 800px;
+    left: 50%; /* Center horizontally */
+    top: 30%;
+    transform: translateX(-50%); /* Center horizontally */
+    background: white;
+    z-index: 1000; /* Above the overlay */
+}
+
+.addtask .task-cat {
+    border: .5px solid gray;
+    padding: 3px 10px;
+}
+
+.btns {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    padding-bottom: 0;
+    align-items: center;
+}
+
+.task-input {
+    padding: 8px;
+    border: none;
+    width: 800px;
+    font-size: 15px;
+}
+
+.task-input:focus {
+    outline: none;
+}
+
+#day.red {
+    color: red;
+}
+
+#day.orange {
+    color: orange;
+}
+
+#day.green {
+    color: green;
+}
+
+#priority.red {
+    color: red;
+}
+
+#priority.orange {
+    color: orange;
+}
+
+#priority.green {
+    color: green;
+}
+
+.date-picker-panel, .priority-panel {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.date-picker-panel {
+    top: 1px;
+    margin-left: -280px;
+    width: 250px;
+    padding: 10px;
+}
+
+.priority-panel {
+    margin-top: -50px;
+    background: whitesmoke;
+    margin-left: 105px;
+    width: 60px;
+}
+
+.date-picker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date-picker-header span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.date-picker-options {
+    margin: 10px 0;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+.calendar {
+    margin: 10px 0;
+}
+
+.month {
+    margin-bottom: 10px;
+}
+
+.month-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.day {
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.day:hover {
+    background-color: #f0f0f0;
+}
+
+.time {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.priority-option {
+    padding: 5px;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 1px;
+}
+
+.priority-option:hover {
+    opacity: 0.8;
+}
+
+.task-list ul li {
+    align-items: center;
+} 
+
+.task-list ul li img {
+    display: none;
+}
+
+.task-list ul li .dot-img {
+    display: block;
+}
+
+input[type="radio"] {
+    width: 15px;
+    height: 15px;
+    border: 2px solid #e34432;
+    cursor: pointer;
+}
+
+.task-list ul li:hover img {
+    display: block;
+}
+
+.task-list ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.task-list ul li .flex {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.task-list ul li div h4 {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.task-list ul li div {
+    font-size: 12px;
+}
+
+.main-screen hr {
+    border: 0;
+    height: 1px;
+    background: #a1a1a16c; /* Light gray color */
+    margin: 10px 0;
+}
+
+.none {
+    display: none;
+}
+
+#overdue-task-list li span {
+    color: #e34432;
+    font-weight: 500;
+}
+
+.msg {
+    display: none;
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #333;
+    position: absolute;
+    width: 220px;
+    left: 15px;
+    bottom: 20px;
+    font-size: 15px;
+    color: #222;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 5px 18px;
+}
+
+.msg .close {
+    font-size: 25px;
+    color: red;
+}
+
+.msg .undo {
+    text-decoration: underline;
+}
+
+.msg span {
+    cursor: pointer;
+}
+
+#panel_btn {
+    display: none;
+    padding: 10px;
+}
+
+@media screen and (max-width: 650px) {
+    
+    .links ul {
+        width: 100%;
+        
+    }
+    
+    .links ul li {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .big-btn {
+        width: 60%;
+    }
+    
+    .contain h1 {
+        font-size: 34px;
+        padding: 0 10px;
+    }
+    
+    .contain h2 {
+        font-size: 18px;
+    }
+    
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .log {
+        flex-direction: column;
+        gap: 20px;
+        width: 90%;
+    }
+    
+    .log div img {
+        width: 100%;
+    }
+    
+    .log-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 14px;
+    }
+    
+    .main-screen {
+        padding: 10px;
+    }
+    
+    .main-screen .main-content {
+        padding: 10px;
+    }
+    
+    #sidebar {
+        display: none;
+    }
+    
+    #panel_btn {
+        display: block;
+    }
+  #none{
+    display: none;
+  }    
+  .main-screen{
+    width: 95%;
+  }
+  .addtask {
+    width: 95%;
+  }
+  .task-input{
+    width: 100%;
+  }
+}
